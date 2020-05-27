@@ -1,0 +1,26 @@
+FILE: dnd_merchant_functional_dependencies
+DATE: 2019-04-08
+DESCRIPTIOPN:
+	This is a functional dependency document related to the dnd merchant 	
+	database for CIS-335 Relational Database and SQL.
+
+TABLE: customer_data
+customer_id --> customer_first_name, customer_last_name, customer_street_address, customer_city, customer_state, customer_zip, customer_phone
+
+TABLE: orders
+order_no, [customer_id] --> order_date, ship_date
+
+TABLE: invoices
+invoice_id, [order_no] --> invoice_due_date, invoice_status, invoice_total, invoice_payment
+
+TABLE: invoice_line_items
+invoice_line_item_id, invoice_line_item_sequence, [product_id] --> product_qty, product_in_stock
+
+TABLE: dnd_inventory
+product_id --> product_name, product_description, product_stock, product_unit_cost
+
+TABLE: suppliers
+supplier_name, supplier_product_sequence, [product_id], [assigned_agent] --> supplier_phone_number
+
+TABLE: employees
+employee_id --> employee_first_name, employee_last_name, employee_role
