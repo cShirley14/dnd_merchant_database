@@ -14,3 +14,6 @@
 * Outlined functional dependencies for the database
 
 * Developed a Database Dictionary outlining the utility, data types, and purpose behind the database's structure
+
+_Table Design_
+![E-R Diagram](dnd_merchant_er_diagram.png)
